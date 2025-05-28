@@ -20,16 +20,20 @@
       background-color: #1b5e20;
       color: white;
     }
+
     header, section {
       padding: 40px 20px;
       text-align: center;
     }
+
     header {
       background-color: #1b5e20;
     }
+
     h1, h2 {
       color: #FFD700;
     }
+
     a.button {
       display: inline-block;
       background-color: #FFD700;
@@ -40,20 +44,25 @@
       text-decoration: none;
       margin: 10px;
     }
+
     .contract-section {
       background-color: #2e7d32;
     }
+
     .team-section {
       background-color: #1b5e20;
     }
+
     ul {
       list-style: none;
       padding: 0;
     }
+
     ul li {
       margin: 10px 0;
       font-size: 1.1em;
     }
+
     .floating-btn {
       position: -webkit-sticky;
       position: sticky;
@@ -71,23 +80,29 @@
       margin: 20px auto;
       text-align: center;
     }
+
     @media (max-width: 768px) {
       body {
         font-size: 16px;
       }
+
       header, section {
         padding: 20px 10px;
       }
+
       h1 {
         font-size: 1.8em;
       }
+
       h2 {
         font-size: 1.4em;
       }
+
       img {
         max-width: 100%;
         height: auto;
       }
+
       .button {
         display: block;
         width: 50%;
@@ -95,24 +110,27 @@
         font-size: 1em;
         padding: 12px;
       }
+
       .floating-btn {
-        position: sticky;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        padding: 16px 0;
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        left: auto;
+        width: 30%;
+        max-width: 120px;
+        padding: 6px 0;
+        font-size: 0.75em;
         text-align: center;
-        font-size: 1em;
-        border-radius: 16px;
+        border-radius: 10px;
         z-index: 1000;
         background: linear-gradient(to right, #FFD700, #FFA500);
         color: #1b5e20;
         font-weight: bold;
         text-decoration: none;
-        box-shadow: 0 0 20px #FFD700;
-        margin-top: 10px;
+        box-shadow: 0 0 10px #FFD700;
+        transition: all 0.4s ease;
       }
+
       .floating-reporter {
         position: fixed;
         bottom: 90px;
@@ -124,29 +142,18 @@
         pointer-events: none;
       }
     }
-      .floating-reporter {
-        position: fixed;
-        bottom: 90px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 120px;
-        height: auto;
-        z-index: 1001;
-        pointer-events: none;
-      }
+
+    .floating-reporter {
+      position: fixed;
+      bottom: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: auto;
+      z-index: 1001;
+      pointer-events: none;
     }
-    }
-        position: fixed;
-        right: 5%;
-        left: 5%;
-        bottom: 20px;
-        width: 90%;
-        text-align: center;
-        font-size: 1em;
-        padding: 14px;
-        border-radius: 16px;
-      }
-    }
+
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
@@ -154,6 +161,7 @@
   </style>
 </head>
 <body>
+
 <header>
   <h1>🚨 PAPS News Token (PNEWS)</h1>
   <div style="margin: 20px 0;">
@@ -198,7 +206,17 @@
   </ul>
 </section>
 
-<a class="floating-btn" href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" target="_blank" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 50%; padding: 16px 0; text-align: center; background: linear-gradient(to right, #FFD700, #FFA500); color: #1b5e20; font-weight: bold; font-size: 1.1em; text-decoration: none; z-index: 1000; box-shadow: 0 0 20px #FFD700;">🛒 Buy PNEWS</a>
+<!-- Buy PNEWS Button -->
+<a class="floating-btn" href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" target="_blank">
+  🛒 Buy PNEWS
+</a>
+
+<!-- Floating Reporter -->
+<div class="floating-reporter">
+  <img src="https://github.com/PEPENEWS45/pepenews/blob/main/female-paps-reporter-final.png?raw=true"
+       alt="Female Reporter Mic"
+       style="width: 100%; height: auto; animation: float 3s ease-in-out infinite; filter: drop-shadow(0 0 8px #FFD700);">
+</div>
 
 <script>
   function copyContract() {
@@ -208,11 +226,6 @@
     });
   }
 </script>
-
-<div class="floating-reporter" style="position: fixed; bottom: 90px; right: 20px; z-index: 1001; animation: float 3s ease-in-out infinite;"> <img src="https://github.com/PEPENEWS45/pepenews/blob/main/female-paps-reporter-final.png?raw=true"
-       alt="Female Reporter Mic"
-       style="width: 120px; height: auto; animation: float 3s ease-in-out infinite; filter: drop-shadow(0 0 8px #FFD700);">
-</div>
 
 </body>
 </html>
