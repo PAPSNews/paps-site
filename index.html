@@ -11,8 +11,8 @@
   <meta property="og:url" content="https://paps.news/" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://paps.news/" />
+  <link rel="icon" href="https://github.com/PAPSNews/paps-site/blob/main/favicon.ico?raw=true" type="image/x-icon" />
   <title>PAPS News Token (PNEWS)</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style>
     body {
       margin: 0;
@@ -71,11 +71,8 @@
       100% { box-shadow: 0 0 8px #FFD700; }
     }
     .animated-buy-btn {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
+      position: sticky;
+      top: 0;
       background: linear-gradient(to right, #FFD700, #FFA500);
       color: #1b5e20;
       padding: 10px 20px;
@@ -88,10 +85,10 @@
       text-align: center;
       transition: transform 0.2s ease-in-out;
       width: 65%;
-      margin: 0 auto;
+      margin: 20px auto;
     }
     .animated-buy-btn:hover {
-      transform: scale(1.08) translateX(-50%);
+      transform: scale(1.08);
     }
     @media (max-width: 768px) {
       .floating-reporter {
@@ -117,42 +114,52 @@
     <a href="https://twitter.com/PapsNewsToken" class="button" target="_blank">🕊️ Twitter</a>
   </div>
   <div style="text-align: center; margin: 20px 0;">
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" class="button animated-buy-btn" target="_blank">🛒 Buy PNEWS</a>
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" class="animated-buy-btn" target="_blank">🛒 Buy PNEWS</a>
   </div>
+
   <section class="about-section" style="background-color:#2e7d32; padding: 40px 20px; text-align: center;">
-  <h2 style="color: #FFD700;">📰 What is PAPS News Token?</h2>
-  <p style="max-width: 700px; margin: auto; color: white;">
-    PAPS News Token (PNEWS) is a meme-powered cryptocurrency aimed at decentralizing journalism. It empowers users to create, share, and amplify the truth using blockchain and meme culture on the BNB Smart Chain.
-  </p>
-</section>
+    <h2 style="color: #FFD700;">📰 What is PAPS News Token?</h2>
+    <p style="max-width: 700px; margin: auto; color: white;">
+      PAPS News Token (PNEWS) is a meme-powered cryptocurrency aimed at decentralizing journalism. It empowers users to create, share, and amplify the truth using blockchain and meme culture on the BNB Smart Chain.
+    </p>
+  </section>
 
-<section class="contract-section">
-  <h2>🔒 Trust and Transparency Measures</h2>
-  <ul>
-    <li>🔗 Contract Address: <code id="contract">0xe7a6deF453a349b86d17E45f8decdAAfCEc95603</code> <button onclick="copyContract()">📋 Copy</button></li>
-    <li>💰 LP Locked – <a href="https://app.uncx.network/lockers/univ2/chain/56/address/0x5c83a97d939634259a444537f86d343d923692c1" target="_blank" style="color: #FFD700;">View Lock</a></li>
-    <li>🔐 Ownership Renounced – <span style="color: #00FF99;">Confirmed</span> (<a href="https://bscscan.com/address/0xe7a6deF453a349b86d17E45f8decdAAfCEc95603#readContract" target="_blank" style="color: #FFD700;">Check Owner</a>)</li>
-    <li>💸 90% Supply Locked – <a href="https://bscscan.com/tx/0xcdc5f9b821657d17d6c5dfa6b4e62d91936e4818aae484a4ad8a1b1b28f7c539" target="_blank" style="color: #FFD700;">View Lock</a></li>
-    <li>💸 0% Buy/Sell Tax</li>
-    <li>❌ No Presale</li>
-    <li>📈 BSCScan Verified – <a href="https://bscscan.com/address/0xe7a6deF453a349b86d17E45f8decdAAfCEc95603#code" target="_blank" style="color: #FFD700;">View Code</a></li>
-    <li>✅ <a href="https://github.com/PAPSNews/paps-site/blob/main/Paps%20News%20Audit%20Placeholder.pdf?raw=true" style="color:#FFD700;" target="_blank">Smart Contract Audit (Coming Soon)</a></li>
-  </ul>
-</section>
+  <section class="contract-section">
+    <h2>🔒 Trust and Transparency Measures</h2>
+    <ul>
+      <li>🔗 Contract Address: <code id="contract">0xe7a6deF453a349b86d17E45f8decdAAfCEc95603</code> <button onclick="copyContract()">📋 Copy</button></li>
+      <li>💰 LP Locked – <a href="https://app.uncx.network/lockers/univ2/chain/56/address/0x5c83a97d939634259a444537f86d343d923692c1" target="_blank" rel="noreferrer noopener" style="color: #FFD700;">View Lock</a></li>
+      <li>🔐 Ownership Renounced – <span style="color: #00FF99;">Confirmed</span> (<a href="https://bscscan.com/address/0xe7a6deF453a349b86d17E45f8decdAAfCEc95603#readContract" target="_blank" rel="noreferrer noopener" style="color: #FFD700;">Check Owner</a>)</li>
+      <li>💸 90% Supply Locked – <a href="https://bscscan.com/tx/0xcdc5f9b821657d17d6c5dfa6b4e62d91936e4818aae484a4ad8a1b1b28f7c539" target="_blank" style="color: #FFD700;">View Lock</a></li>
+      <li>💸 0% Buy/Sell Tax</li>
+      <li>❌ No Presale</li>
+      <li>📈 BSCScan Verified – <a href="https://bscscan.com/address/0xe7a6deF453a349b86d17E45f8decdAAfCEc95603#code" target="_blank" rel="noreferrer noopener" style="color: #FFD700;">View Code</a></li>
+    </ul>
+  </section>
 
-<section class="team-section">
-  <h2>👥 Meet the Team</h2>
-  <ul>
-    <li><strong>Editor-in-Chief:</strong> Jacob Joseph O. – <a href="mailto:josejacs@yahoo.com" style="color: #FFD700;">Email</a> | <a href="https://www.linkedin.com/in/jacob-joseph-o-b2071576" style="color: #FFD700;">LinkedIn</a></li>
-    <li><strong>Pauma</strong> – <a href="https://twitter.com/PamelaA44949661" target="_blank" style="color: #FFD700;">Twitter</a></li>
-  </ul>
-</section>
+  <section class="team-section">
+    <h2>👥 Meet the Team</h2>
+    <ul>
+      <li><strong>Editor-in-Chief:</strong> Jacob Joseph O. – <a href="mailto:josejacs@yahoo.com" style="color: #FFD700;">Email</a> | <a href="https://www.linkedin.com/in/jacob-joseph-o-b2071576" target="_blank" rel="noreferrer noopener" style="color: #FFD700;">LinkedIn</a></li>
+      <li><strong>Pauma</strong> – <a href="https://twitter.com/PamelaA44949661" target="_blank" rel="noreferrer noopener" style="color: #FFD700;">Twitter</a></li>
+    </ul>
+  </section>
 
-<a href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" target="_blank"><img class="floating-reporter" src="https://github.com/PEPENEWS45/pepenews/blob/main/female-paps-reporter-final.png?raw=true" alt="Female Reporter Mic" /></a>
+  <a href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" target="_blank">
+    <img class="floating-reporter" src="https://github.com/PEPENEWS45/pepenews/blob/main/female-paps-reporter-final.png?raw=true" alt="Female Reporter Mic" />
+  </a>
 
-<footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #ccc; background-color: #1b5e20;">
-  &copy; 2025 PAPS News Token. All rights reserved.
-</footer>
+  <footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #ccc; background-color: #1b5e20;">
+    &copy; 2025 PAPS News Token. All rights reserved.
+  </footer>
 
+  <script>
+    function copyContract() {
+      const contract = document.getElementById('contract').innerText;
+      navigator.clipboard.writeText(contract).then(() => {
+        alert("✅ Contract address copied!");
+      });
+    }
+  </script>
 </body>
 </html>
