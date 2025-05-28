@@ -51,8 +51,6 @@
       margin: 10px 0;
       font-size: 1.1em;
     }
-
-    /* Desktop styles */
     .floating-btn {
       position: fixed;
       bottom: 20px;
@@ -68,10 +66,9 @@
       z-index: 1000;
       box-shadow: 0 0 20px #FFD700;
     }
-
     .floating-reporter {
       position: fixed;
-      bottom: 90px;
+      top: 20px;
       right: 20px;
       width: 120px;
       height: auto;
@@ -79,43 +76,26 @@
       animation: float 3s ease-in-out infinite;
       filter: drop-shadow(0 0 8px #FFD700);
     }
-
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
-
-    /* Mobile styles */
     @media (max-width: 768px) {
       .floating-reporter {
-        position: sticky;
         top: 10px;
         right: 10px;
-        left: auto;
-        transform: none;
-        width: 90px;
-        height: auto;
-        z-index: 1001;
+        width: 60px;
       }
-
       .floating-btn {
-        position: sticky;
-        top: 110px;
+        top: 75px;
         right: 10px;
-        width: 150px;
-        padding: 10px 0;
+        width: 75px;
+        padding: 6px 0;
         text-align: center;
-        font-size: 0.9em;
-        border-radius: 16px;
-        z-index: 1000;
-        background: linear-gradient(to right, #FFD700, #FFA500);
-        color: #1b5e20;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0 0 12px #FFD700;
+        font-size: 0.6em;
+        border-radius: 12px;
         animation: bounce 0.3s ease-in-out;
       }
-
       @keyframes bounce {
         0%   { transform: scale(1); }
         50%  { transform: scale(1.08); }
@@ -125,7 +105,6 @@
   </style>
 </head>
 <body>
-
 <header>
   <h1>🚨 PAPS News Token (PNEWS)</h1>
   <div style="margin: 20px 0;">
@@ -138,7 +117,7 @@
     <a href="https://t.me/PapsNews" class="button" target="_blank">💬 Telegram</a>
     <a href="https://github.com/PAPSNews/paps-site/blob/main/Paps%20News%20Token%20Wthite%20Paper.pdf?raw=true" class="button" download="PAPS_Whitepaper.pdf" target="_blank">📄 Whitepaper</a>
     <a href="https://github.com/PAPSNews/paps-site/blob/main/Paps%20News%20Safety%20Guide.pdf?raw=true" class="button" download="PAPS_Safety_Guide.pdf" target="_blank">🚨 Safety Guide</a>
-    <a href="https://twitter.com/PapsNewsToken" class="button" target="_blank">🕊️ Twitter</a>
+    <a href="https://twitter.com/PapsNewsToken" class="button" target="_blank">🕳️ Twitter</a>
   </div>
 </header>
 
