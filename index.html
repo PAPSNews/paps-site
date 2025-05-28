@@ -55,9 +55,9 @@
       font-size: 1.1em;
     }
     .floating-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
+      position: -webkit-sticky;
+      position: sticky;
+      bottom: 10px;
       background: linear-gradient(to right, #FFD700, #FFA500);
       color: #1b5e20;
       padding: 16px 26px;
@@ -67,6 +67,9 @@
       text-decoration: none;
       z-index: 1000;
       box-shadow: 0 0 20px #FFD700;
+      display: inline-block;
+      margin: 20px auto;
+      text-align: center;
     }
     @media (max-width: 768px) {
       body {
@@ -93,6 +96,7 @@
         padding: 12px;
       }
       .floating-btn {
+        position: fixed;
         right: 5%;
         left: 5%;
         bottom: 20px;
@@ -151,13 +155,10 @@
   <h2>👥 Meet the Team</h2>
   <ul>
     <li><strong>Editor-in-Chief:</strong> Jacob Joseph O. – <a href="mailto:josejacs@yahoo.com" style="color: #FFD700;">Email</a> | <a href="https://www.linkedin.com/in/jacob-joseph-o-b2071576" style="color: #FFD700;">LinkedIn</a></li>
-    
   </ul>
 </section>
 
-<a class="floating-btn" href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" target="_blank">
-  🛒 Buy PNEWS
-</a>
+<a class="floating-btn" href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" target="_blank" style="position: fixed; bottom: 20px; right: 20px; width: auto; padding: 14px 20px; z-index: 1000;">🛒 Buy PNEWS</a>
 
 <script>
   function copyContract() {
@@ -168,9 +169,11 @@
   }
 </script>
 
-<img src="https://github.com/PEPENEWS45/pepenews/blob/main/female-paps-reporter-final.png?raw=true"
-     alt="Female Reporter Mic"
-     style="position: fixed; bottom: 80px; right: 20px; width: 120px; height: auto; animation: float 3s ease-in-out infinite; filter: drop-shadow(0 0 8px #FFD700); z-index: 999;">
+<div style="position: fixed; bottom: 90px; right: 20px; width: 120px; height: auto; z-index: 1001; pointer-events: none;">
+  <img src="https://github.com/PEPENEWS45/pepenews/blob/main/female-paps-reporter-final.png?raw=true"
+       alt="Female Reporter Mic"
+       style="width: 120px; height: auto; animation: float 3s ease-in-out infinite; filter: drop-shadow(0 0 8px #FFD700);">
+</div>
 
 </body>
 </html>
