@@ -51,26 +51,9 @@
       margin: 10px 0;
       font-size: 1.1em;
     }
-
-    .floating-btn {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(to right, #FFD700, #FFA500);
-      color: #1b5e20;
-      padding: 16px 26px;
-      border-radius: 40px;
-      font-weight: bold;
-      font-size: 1.1em;
-      text-decoration: none;
-      z-index: 1000;
-      box-shadow: 0 0 20px #FFD700;
-    }
-
     .floating-reporter {
       position: fixed;
-      bottom: 90px;
+      top: 20px;
       right: 20px;
       width: 120px;
       height: auto;
@@ -78,71 +61,65 @@
       animation: float 3s ease-in-out infinite;
       filter: drop-shadow(0 0 8px #FFD700);
     }
-
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
-
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 8px #FFD700; }
+      50% { box-shadow: 0 0 16px #FFA500; }
+      100% { box-shadow: 0 0 8px #FFD700; }
+    }
+    .animated-buy-btn {
+  position: sticky;
+  top: 70px;
+  z-index: 1000;
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  color: #1b5e20;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  animation: glowPulse 1.5s ease-in-out infinite;
+  box-shadow: 0 0 16px #FFD700;
+  display: block;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  width: 65%;
+  margin: 0 auto;
+}
+    .animated-buy-btn:hover {
+      transform: scale(1.08) translateX(-50%);
+    }
     @media (max-width: 768px) {
       .floating-reporter {
-        position: sticky;
+        width: 60px;
         top: 10px;
         right: 10px;
-        left: auto;
-        transform: none;
-        width: 45px;
-        height: auto;
-        z-index: 1001;
       }
-
-      .floating-btn {
-        position: sticky;
-        top: 55px;
-        right: 10px;
-        width: 75px;
-        padding: 6px 0;
-        text-align: center;
-        font-size: 0.6em;
-        border-radius: 12px;
-        z-index: 1000;
-        background: linear-gradient(to right, #FFD700, #FFA500);
-        color: #1b5e20;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0 0 10px #FFD700;
-        animation: bounce 0.3s ease-in-out;
-      }
-
-      @keyframes bounce {
-        0%   { transform: scale(1); }
-        50%  { transform: scale(1.08); }
-        100% { transform: scale(1); }
+      .animated-buy-btn {
+        width: 70%;
+        font-size: 0.95em;
       }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>🚨 PAPS News Token (PNEWS)</h1>
-  <div style="margin: 20px 0;">
-    <img src="https://github.com/PAPSNews/paps-site/blob/main/paps-news-token-logo-200x200.png?raw=true" 
-         alt="PAPS News Logo" 
-         style="width: 160px; height: auto; filter: drop-shadow(0 0 10px #FFD700);" />
+  <div style="margin: 20px auto; text-align: center;">
+    <img src="https://github.com/PAPSNews/paps-site/blob/main/paps-news-token-logo-200x200.png?raw=true" alt="PAPS News Logo" style="width: 160px; height: auto; filter: drop-shadow(0 0 10px #FFD700);" />
   </div>
-  <p>🚀 The Currency of Meme Journalism</p>
-  <div>
+  <div style="text-align: center;">
     <a href="https://t.me/PapsNews" class="button" target="_blank">💬 Telegram</a>
     <a href="https://github.com/PAPSNews/paps-site/blob/main/Paps%20News%20Token%20Wthite%20Paper.pdf?raw=true" class="button" download="PAPS_Whitepaper.pdf" target="_blank">📄 Whitepaper</a>
     <a href="https://github.com/PAPSNews/paps-site/blob/main/Paps%20News%20Safety%20Guide.pdf?raw=true" class="button" download="PAPS_Safety_Guide.pdf" target="_blank">🚨 Safety Guide</a>
     <a href="https://twitter.com/PapsNewsToken" class="button" target="_blank">🕊️ Twitter</a>
   </div>
-</header>
-
-<section class="about-section" style="background-color:#2e7d32;">
-  <h2>📰 What is PAPS News Token?</h2>
-  <p style="max-width: 700px; margin: auto;">
+  <div style="text-align: center; margin: 20px 0;">
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" class="button animated-buy-btn" target="_blank">🛒 Buy PNEWS</a>
+  </div>
+  <section class="about-section" style="background-color:#2e7d32; padding: 40px 20px; text-align: center;">
+  <h2 style="color: #FFD700;">📰 What is PAPS News Token?</h2>
+  <p style="max-width: 700px; margin: auto; color: white;">
     PAPS News Token (PNEWS) is a meme-powered cryptocurrency aimed at decentralizing journalism. It empowers users to create, share, and amplify the truth using blockchain and meme culture on the BNB Smart Chain.
   </p>
 </section>
@@ -165,24 +142,16 @@
   <h2>👥 Meet the Team</h2>
   <ul>
     <li><strong>Editor-in-Chief:</strong> Jacob Joseph O. – <a href="mailto:josejacs@yahoo.com" style="color: #FFD700;">Email</a> | <a href="https://www.linkedin.com/in/jacob-joseph-o-b2071576" style="color: #FFD700;">LinkedIn</a></li>
-    <li><strong>Pseudonymous:</strong> Pauma – <a href="https://twitter.com/PamelaA44949661" target="_blank" style="color: #FFD700;">@PamelaA44949661</a></li>
+    <li><strong>Pseudomonous:</strong> Pauma – <a href="https://twitter.com/PamelaA44949661" target="_blank" style="color: #FFD700;">@PamelaA44949661</a></li>
   </ul>
 </section>
 
-<a class="floating-btn" href="https://pancakeswap.finance/swap?outputCurrency=0xe7a6deF453a349b86d17E45f8decdAAfCEc95603" target="_blank">🛒 Buy PNEWS</a>
+$1
+<img class="floating-reporter" src="https://github.com/PEPENEWS45/pepenews/blob/main/female-paps-reporter-final.png?raw=true" alt="Female Reporter Mic" />
 
-<div class="floating-reporter">
-  <img src="https://github.com/PEPENEWS45/pepenews/blob/main/female-paps-reporter-final.png?raw=true" alt="Female Reporter Mic">
-</div>
-
-<script>
-  function copyContract() {
-    const contract = document.getElementById('contract').innerText;
-    navigator.clipboard.writeText(contract).then(() => {
-      alert("✅ Contract address copied!");
-    });
-  }
-</script>
+<footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #ccc; background-color: #1b5e20;">
+  &copy; 2025 PAPS News Token. All rights reserved.
+</footer>
 
 </body>
 </html>
